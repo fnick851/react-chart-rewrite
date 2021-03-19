@@ -1,0 +1,27 @@
+[
+    {
+        "year": "2017",
+        "applicants": "116",
+        "percent_growth": ""
+    },
+    {
+        "year": "2018",
+        "applicants": "156",
+        "percent_growth": "0.344827586"
+    },
+    {
+        "year": "2019",
+        "applicants": "141",
+        "percent_growth": "-0.096153846"
+    },
+    {
+        "year": "2020",
+        "applicants": "154",
+        "percent_growth": "0.092198582"
+    },
+    {
+        "year": "2021",
+        "applicants": "246",
+        "percent_growth": "0.597402597"
+    }
+]
