@@ -1,70 +1,86 @@
 .Chart {
   width: 100%;
   max-width: 800px;
-}
-.Chart svg {
-  width: 100%;
-}
-.Chart .tick text {
-  font-size: 16px;
-}
-.Chart .bars rect {
-  fill: #0f8b96;
-}
-.Chart .bars text {
-  fill: #333333;
-  font-weight: bold;
-  text-anchor: middle;
-  font-size: 18px;
-}
-.Chart .line circle {
-  fill: #002462;
-  stroke: white;
-  stroke-width: 3;
-}
-.Chart .line text {
-  text-anchor: middle;
-  fill: white;
-  font-weight: bold;
-  font-size: 16px;
-}
-.Chart .line path {
-  fill: none;
-  stroke: #002462;
-  stroke-width: 5px;
-  stroke-linecap: round;
-}
-.Chart .legends path {
-  stroke-width: 2px;
-  stroke-linecap: round;
-  stroke: #002462;
-  fill: none;
-}
-.Chart .legends circle {
-  fill: #002462;
-  stroke: white;
-  stroke-width: 2;
-}
-.Chart .legends text {
-  font-weight: bold;
-}
-.Chart .footnote {
-  margin-top: 20px;
-}
-.Chart .footnote p {
-  font-size: 11px;
+  & svg {
+    width: 100%;
+  }
+  & .tick {
+    & text {
+      font-size: 16px;
+    }
+  }
+
+  & .bars {
+    & rect {
+      fill: #0f8b96;
+    }
+    & text {
+      fill: #333333;
+      font-weight: bold;
+      text-anchor: middle;
+      font-size: 18px;
+    }
+  }
+
+  & .line {
+    & circle {
+      fill: #002462;
+      stroke: white;
+      stroke-width: 3;
+    }
+    & text {
+      text-anchor: middle;
+      fill: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    & path {
+      fill: none;
+      stroke: #002462;
+      stroke-width: 5px;
+      stroke-linecap: round;
+    }
+  }
+
+  & .legends {
+    & path {
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke: #002462;
+      fill: none;
+    }
+    & circle {
+      fill: #002462;
+      stroke: white;
+      stroke-width: 2;
+    }
+    & text {
+      font-weight: bold;
+    }
+  }
+
+  & .footnote {
+    margin-top: 20px;
+    & p {
+      font-size: 11px;
+    }
+  }
 }
 
 /* line animation */
-.Chart .line path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-}
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
 }
-.Chart .line path.animated {
-  animation: dash 2s forwards;
+.Chart {
+  & .line {
+    & path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      &.animated {
+        animation: dash 2s forwards;
+      }
+    }
+  }
 }

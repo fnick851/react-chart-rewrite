@@ -88,7 +88,7 @@ export function Chart() {
       .attr("height", (d) => y(0) - y(d.applicants))
       .delay((d, i) => i * 100)
     setTimeout(() => {
-      setShowbarText(false)
+      setShowbarText(true)
     }, 1200)
   })
   // 2. line animation
@@ -113,9 +113,11 @@ export function Chart() {
                 width={x.bandwidth()}
                 height="0"
               />
-              <text v-if="showBarText" x={barTextX(item)} y={barTextY(item)}>
-                {item.applicants}
-              </text>
+              {showBarText ? (
+                <text x={barTextX(item)} y={barTextY(item)}>
+                  {item.applicants}
+                </text>
+              ) : null}
             </g>
           ))}
         </g>
