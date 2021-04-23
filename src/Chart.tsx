@@ -102,6 +102,7 @@ export function Chart() {
 
   return (
     <div className="Chart" ref={vizRootRef}>
+      <h1>NAEP Internship Program Applicants Growth</h1>
       <svg viewBox={`0 0 ${width} ${height}`}>
         <g className="bars">
           {timeseries.map((item, index) => (
